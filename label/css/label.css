@@ -1,0 +1,22 @@
+*{margin: 0; padding: 0;}
+.all_tab{width: 500px; margin: 0 auto;} 
+
+input[name="tab_item"] {display: none;}
+
+label{height: 50px; text-align: center;width: calc(100%/4); display: block; float: left; border: 1px solid #000; line-height: 50px;}
+
+.content{display: none; }
+
+.tabs{ display: flex; }
+
+
+#name_tab:checked~.tabs label[for="name_tab"],
+#phone_tab:checked~.tabs label[for="phone_tab"],
+#email_tab:checked~.tabs label[for="email_tab"],
+#gender_tab:checked~.tabs label[for="gender_tab"]{ background: red; }
+
+
+#name_tab:checked~.contents #name,
+#phone_tab:checked~.contents #phone,
+#email_tab:checked~.contents #email,
+#gender_tab:checked~.contents #gender{ display: block; }
