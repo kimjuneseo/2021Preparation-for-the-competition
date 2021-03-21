@@ -1,0 +1,17 @@
+*{margin: 0; padding: 0;}
+.allContet{width: 500px; margin: 0 auto; text-align: center;}
+input[name="inputTab"]{display: none;}
+label{ width: calc(100%/4); height: 50px; text-align: center; border: 1px solid red; display: block; line-height: 50px;} 
+.labs{display: flex;}
+
+.content{display: none;}
+
+#tab1:checked~.content #nameContent,
+#tab2:checked~.content #phoneContent,
+#tab3:checked~.content #emailContent,
+#tab4:checked~.content #schoolContent{ display: block; }
+
+#tab1:checked~.labs label[for="tab1"],
+#tab2:checked~.labs label[for="tab2"],
+#tab3:checked~.labs label[for="tab3"],
+#tab4:checked~.labs label[for="tab4"]{background: red;}

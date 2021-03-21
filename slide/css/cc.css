@@ -1,17 +1,20 @@
-*{margin: 0; padding: 0;}
-section{width: 1000px; height: 400px; overflow: hidden;}
-.silder{width: 400%; height: 100%; display: flex; 
-    animation: silde 9s infinite linear;}
+*{margin: 0%; padding: 0;}
+section{width: 1000px; height: 300px; overflow: hidden;}
+.slide{width: 400%; height: 100%;  display: flex;
+    animation: slider 4s infinite linear;}
+.slide div:nth-child(1),.slide div:nth-child(4){flex: 1; background: red;}
+.slide div:nth-child(2){flex: 1; background: blue;}
+.slide div:nth-child(3){flex: 1; background: chartreuse;}
 
-.silder div:nth-child(1).silder div:nth-child(4){flex: 1; background: red;}
-.silder div:nth-child(2){flex: 1; background: blue;}
-.silder div:nth-child(3){flex: 1; background: violet;}
-@keyframes silde{
-    00%{margin-left: 0;}
-    30%{margin-left: 0;}
-    33.33%{margin-left: -100%;}
+@keyframes slider{
+    00%{margin-left: 0%;}
+    30%{margin-left: 0%;}
+    33.333%{margin-left: -100%;}
     63%{margin-left: -100%;}
-    66.66%{margin-left: -200%;}
-    96%{margin-left: -200%;}
+    66.666%{margin-left: -200%;}
+    96%{margin-left: -200%}
     100%{margin-left: -300%;}
 }
+#a{width: 100px; height: 100px; background: red; position: relative; 
+transition: 20s cubic-bezier(.24,-1.65,.82,-1.65); left: 0; top: 400px;}
+#a:hover{left: 1000px; top: 100px;}
