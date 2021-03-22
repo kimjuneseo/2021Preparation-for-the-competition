@@ -15,6 +15,13 @@ label{height: 50px; text-align: center;width: calc(100%/4); display: block; floa
 #email_tab:checked~.contents #email,
 #gender_tab:checked~.contents #gender{ display: block; }
 
+
+#name_tab:checked~.contents #name,
+#phone_tab:checked~.contents #phone,
+#email_tab:checked~.contents #email,
+#gender_tab:checked~.contents #gender{ display: block; }
+
+
 #name_tab:checked~.tabs label[for="name_tab"],
 #phone_tab:checked~.tabs label[for="phone_tab"],
 #email_tab:checked~.tabs label[for="email_tab"],
