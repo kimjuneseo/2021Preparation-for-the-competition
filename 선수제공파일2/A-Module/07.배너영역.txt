@@ -1,0 +1,33 @@
+﻿이미지자료 폴더의 배너 이미지를 참고하며, 존재하지 않은 배너 이미지는 직접 제작한다.
+
+[배너영역 목록]
+명칭: 문화재청
+주소: https://www.cha.go.kr/
+
+명칭: 국립무형유산원
+주소: https://www.nihc.go.kr/
+
+명칭: 한국문화재재단
+주소: http://www.chf.or.kr/
+
+명칭: 국립국악원
+주소: http://www.gugak.go.kr/
+
+명칭: 국립극장
+주소: https://www.ntok.go.kr/
+
+명칭: 한국문화예술위원회
+주소: https://www.arko.or.kr/
+
+명칭: 국립민속박물관
+주소: http://www.nfm.go.kr/
+
+명칭: 유네스코아태무형유산센터
+주소: https://www.ichcap.org/
+
+명칭: 한국전통소리문화
+주소: http://www.koreamusic.org/
+
+명칭: 유네스코한국위원회
+주소: https://www.unesco.or.kr/
+
