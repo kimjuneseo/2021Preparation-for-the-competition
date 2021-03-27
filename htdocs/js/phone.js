@@ -38,17 +38,17 @@ const result = fetch(url)
 
 	})
 
-$.getJSON("/restAPI/phone.php", function ({ statusCd, statusMsg, totalCount, items }) {
-	if (statusCd != 200) {
-		alert(statusMsg);
-		return location.href = "/index.html";
-	}
-	const itemFilter = items.reduce((acc, { deptNm, name, sn, telNo }) => {
-		acc[deptNm] = [...acc[deptNm] || [], { name, sn, telNO }];
-		return acc;
-	}, {})
-	Object.keys(itemFilter).forEach(key => {
-		$(".categoryList").append(`<div>${key}</div>`)
-		$(".category-container").append(`<li data-name="${key}"<h3>${key}</h3>`)
+
+const result = fetch(url)
+	.then(res => res.text())
+	.then(data => new DOMParser().parseFromString(data, 'text/xml'))
+	.tnen(xmlData => {
+		return [...xmlData.querySelectorAll('item')].map(({ children }) => {
+			return [...children].reduce((item, { tagName, children, textContent }) => {
+				item[tagName] = [...children].map(({ textContent }) => textContent)
+				textContent
+
+				return item
+			}, {})
+		})
 	})
-})
