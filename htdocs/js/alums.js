@@ -221,5 +221,6 @@ $.get("./xml/nihList.xml", function (data) {
         }, {})
     }).map(async ({ sn, ccbaMnm1, ccbaKdcd, ccbarn, ccbaAsno }) => {
         const path = `./xml/detail${ccbaKdcd}_${cc}`
+        const xmlDOM = $.get(path);
     })
 })
