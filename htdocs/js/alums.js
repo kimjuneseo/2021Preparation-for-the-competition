@@ -221,6 +221,15 @@ $.get("./xml/nihList.xml", function (data) {
         }, {})
     }).map(async ({ sn, ccbaMnm1, ccbaKdcd, ccbarn, ccbaAsno }) => {
         const path = `./xml/detail${ccbaKdcd}_${cc}`
-        const xmlDOM = $.get(path);
+        const xmlDOM = await $.get(path);
+        const image = $(xmlDOM).find("imgaeUrl").text()
+        return {
+            image, ccbaMnm1
+        }
+    })
+    items.forEach(async (value) => {
+        await value.then(({ image, ccbaMnm1 }) => {
+            // $("").
+        })
     })
 })
