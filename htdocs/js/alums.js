@@ -229,7 +229,14 @@ $.get("./xml/nihList.xml", function (data) {
     })
     items.forEach(async (value) => {
         await value.then(({ image, ccbaMnm1 }) => {
-            // $("").
+            $("albums").append(`<div>
+            <div class="img-box>
+                <img src="${image}" alt="no Error" onError="this.src="noimage.png>
+            </div>
+            <div class="text-wrap">
+                <p>${ccbaMnm1}</p>
+            </div>
+            </div>`)
         })
     })
 })
