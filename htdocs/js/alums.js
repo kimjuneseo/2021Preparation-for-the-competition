@@ -239,4 +239,6 @@ $.get("./xml/nihList.xml", function (data) {
             </div>`)
         })
     })
+    $(document)
+        .on('click', 'category', functio()=> )
 })
