@@ -18,25 +18,25 @@ $.getJSON("/restAPI/phone.php", function ({ statusCd, statusMsg, totalCount, ite
 });
 
 
-// const url = "";
-// //url에 요청을 보내고 프로미스로 반환
-// const result = fetch(url)
-// 	//온 프로미스 객체를 text로 변환
-// 	.then(res => res.text())
-// 	//xml을 자바스크립트 돔 객체로 변환
-// 	.then(data => new DOMParser().parseFromString(data, 'text/xml'))
-// 	//변환된 파일에 item을 들고와서 그 자식요소에 
-// 	.then(xmlData => {
-// 		return [...xmlData.querySelectorAll('item')].map(({ children }) => {
-// 			//item에 자식요소에
-// 			return [...children].reduce((item, { tagName, children, textContent }) => {
-// 				item[tagName] = tagName === "sn" ? `00${textContent}`.substr(-3) :
-// 					tagName === "imges" ? [...children].map(({ textContent }) => textContent) :
-// 						textContent
-// 			}, {})
-// 		})
+const url = "";
+//url에 요청을 보내고 프로미스로 반환
+const result = fetch(url)
+	//온 프로미스 객체를 text로 변환
+	.then(res => res.text())
+	//xml을 자바스크립트 돔 객체로 변환
+	.then(data => new DOMParser().parseFromString(data, 'text/xml'))
+	//변환된 파일에 item을 들고와서 그 자식요소에 
+	.then(xmlData => {
+		return [...xmlData.querySelectorAll('item')].map(({ children }) => {
+			//item에 자식요소에
+			return [...children].reduce((item, { tagName, children, textContent }) => {
+				item[tagName] = tagName === "sn" ? `00${textContent}`.substr(-3) :
+					tagName === "imges" ? [...children].map(({ textContent }) => textContent) :
+						textContent
+			}, {})
+		})
 
-// 	})
+	})
 
 
 // const result = fetch(url)
