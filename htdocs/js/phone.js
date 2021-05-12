@@ -16,3 +16,5 @@ $.getJSON("/restAPI/phone.php", function ({ statusCd, statusMsg, totalCount, ite
 		$(this).text() == "전체" ? $(`.category-container>li`).show() : $(`.category-container>li[data-name="${$(this).text()}"]`).show().siblings().hide();
 	});
 });
+
+dd
